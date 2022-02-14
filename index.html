@@ -1,0 +1,385 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="world.css">
+    <title>World Countries Data Visualization</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="titles" id="titles">
+          <h1 style="color: orange; font-size: 40px;" >World Countries Data</h1>
+          <p style="font-size: 20px;">Currently,we have 250 Countries</p>
+       </div>
+       <div class="buttons" id="buttons">
+            <button onclick="population()" style="background-color: orange; width: 150px; height: 40px; margin-right: 1rem; border-radius: 20px; border-color: aliceblue;">POPULATION</button>
+            <button onclick="languages()" style="background-color: orange; width: 150px; height: 40px; border-radius: 20px; border-radius: 20px; border-color: aliceblue;">LANGUAGES</button>
+       </div>
+       <p class="show-p" id="show-p" style="text-align: center;"></p>
+       <div class="important" id="important">
+           <div class="country" id="country" style="margin-left: 2rem;">
+            <h2 id="countries"></h2>  
+            <h2 id="countries-1"></h2>    
+            <h2 id="countries-2"></h2>
+            <h2 id="countries-3"></h2>
+            <h2 id="countries-4"></h2>
+            <h2 id="countries-5"></h2>
+            <h2 id="countries-6"></h2>
+            <h2 id="countries-7"></h2>
+            <h2 id="countries-8"></h2>
+            <h2 id="countries-9"></h2>
+            <h2 id="countries-10"></h2>                   
+           </div>
+            <div style="margin-top: 7px;">
+                <h2 class="graphics" id="graphics" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-1" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-2" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-3" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-4" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-5" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-6" style="border-radius: 2px; margin: bottom 35px;"></h2>
+                <h2 id="graphics-7" style="border-radius: 2px;"></h2>
+                <h2 id="graphics-8" style="border-radius: 2px; margin-bottom: 25px;"></h2>
+                <h2 id="graphics-9" style="border-radius: 2px; margin-bottom: 30px;"></h2>
+                <h2 id="graphics-10" style="border-radius: 2px;"></h2>
+            </div>
+            <div>
+                <h2 id="number"></h2>
+                <h2 id="number-1"></h2>
+                <h2 id="number-2"></h2>
+                <h2 id="number-3"></h2>
+                <h2 id="number-4"></h2>
+                <h2 id="number-5"></h2>
+                <h2 id="number-6" style="margin: bottom 35px;"></h2>
+                <h2 id="number-7"></h2>
+                <h2 id="number-8" style="margin-bottom: 25px;"></h2>
+                <h2 id="number-9" style="margin-bottom: 20px;"></h2>
+                <h2 id="number-10"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        function population(){
+      let result= document.getElementById('show-p')
+      let resultP='10 most Population Countries In The World'
+      result.innerHTML=resultP
+    //
+    let ülke=document.getElementById('countries')
+    let ülkecik='World'
+    ülke.innerHTML=ülkecik
+    let ülke1=document.getElementById('countries-1')
+    let ülkecik1='China'
+    ülke1.innerHTML=ülkecik1
+    let ülke2=document.getElementById('countries-2')
+    let ülkecik2='India'
+    ülke2.innerHTML=ülkecik2
+    let ülke3=document.getElementById('countries-3')
+    let ülkecik3='Usa'
+    ülke3.innerHTML=ülkecik3
+    let ülke4=document.getElementById('countries-4')
+    let ülkecik4='Indonesia'
+    ülke4.innerHTML=ülkecik4
+    let ülke5=document.getElementById('countries-5')
+    let ülkecik5='Brazil'
+    ülke5.innerHTML=ülkecik5
+    let ülke6=document.getElementById('countries-6')
+    let ülkecik6='Pakistan'
+    ülke6.innerHTML=ülkecik6
+    let ülke7=document.getElementById('countries-7')
+    let ülkecik7='Nigeria'
+    ülke7.innerHTML=ülkecik7
+    let ülke8=document.getElementById('countries-8')
+    let ülkecik8='Bangladesh'
+    ülke8.innerHTML=ülkecik8
+    let ülke9=document.getElementById('countries-9')
+    let ülkecik9='Russia'
+    ülke9.innerHTML=ülkecik9
+    let ülke10=document.getElementById('countries-10')
+    let ülkecik10='Japan'
+    ülke10.innerHTML=ülkecik10
+//
+    let grafik=document.getElementById('graphics')
+    grafik.style.width='800px'
+    grafik.style.height='25px'
+    grafik.style.display='block'
+    grafik.style.justifyContent='center'
+    grafik.style.backgroundColor='orange'
+
+    let grafik1=document.getElementById('graphics-1')
+    grafik1.style.width='200px'
+    grafik1.style.height='25px'
+    grafik1.style.display='block'
+    grafik1.style.justifyContent='center'
+    grafik1.style.backgroundColor='orange'
+    
+    let grafik2=document.getElementById('graphics-2')
+    grafik2.style.width='180px'
+    grafik2.style.height='25px'
+    grafik2.style.display='block'
+    grafik2.style.justifyContent='center'
+    grafik2.style.backgroundColor='orange'
+
+    let grafik3=document.getElementById('graphics-3')
+    grafik3.style.width='60px'
+    grafik3.style.height='25px'
+    grafik3.style.display='block'
+    grafik3.style.justifyContent='center'
+    grafik3.style.backgroundColor='orange'
+
+    let grafik4=document.getElementById('graphics-4')
+    grafik4.style.width='50px'
+    grafik4.style.height='25px'
+    grafik4.style.display='block'
+    grafik4.style.justifyContent='center'
+    grafik4.style.backgroundColor='orange'
+
+    let grafik5=document.getElementById('graphics-5')
+    grafik5.style.width='45px'
+    grafik5.style.height='25px'
+    grafik5.style.display='block'
+    grafik5.style.justifyContent='center'
+    grafik5.style.backgroundColor='orange'
+
+    let grafik6=document.getElementById('graphics-6')
+    grafik6.style.width='42px'
+    grafik6.style.height='25px'
+    grafik6.style.display='block'
+    grafik6.style.justifyContent='center'
+    grafik6.style.backgroundColor='orange'
+
+    let grafik7=document.getElementById('graphics-7')
+    grafik7.style.width='30px'
+    grafik7.style.height='25px'
+    grafik7.style.display='block'
+    grafik7.style.justifyContent='center'
+    grafik7.style.backgroundColor='orange'
+
+    let grafik8=document.getElementById('graphics-8')
+    grafik8.style.width='27px'
+    grafik8.style.height='25px'
+    grafik8.style.display='block'
+    grafik8.style.justifyContent='center'
+    grafik8.style.backgroundColor='orange'
+
+    let grafik9=document.getElementById('graphics-9')
+    grafik9.style.width='23px'
+    grafik9.style.height='25px'
+    grafik9.style.display='block'
+    grafik9.style.justifyContent='center'
+    grafik9.style.backgroundColor='orange'
+
+    let grafik10=document.getElementById('graphics-10')
+    grafik10.style.width='20px'
+    grafik10.style.height='25px'
+    grafik10.style.display='block'
+    grafik10.style.justifyContent='center'
+    grafik10.style.backgroundColor='orange'
+
+    let sayı=document.getElementById('number')
+    let sayıcık='7,693,165,599'
+    sayı.innerHTML=sayıcık
+
+    let sayı1=document.getElementById('number-1')
+    let sayıcık1='1,377,422,166'
+    sayı1.innerHTML=sayıcık1
+
+    let sayı2=document.getElementById('number-2')
+    let sayıcık2='1,295,210,000'
+    sayı2.innerHTML=sayıcık2
+
+    let sayı3=document.getElementById('number-3')
+    let sayıcık3='323,947,000'
+    sayı3.innerHTML=sayıcık3
+
+    let sayı4=document.getElementById('number-4')
+    let sayıcık4='258,705,000'
+    sayı4.innerHTML=sayıcık4
+
+    let sayı5=document.getElementById('number-5')
+    let sayıcık5='206,135,893'
+    sayı5.innerHTML=sayıcık5
+
+    let sayı6=document.getElementById('number-6')
+    let sayıcık6='194,125,062'
+    sayı6.innerHTML=sayıcık6
+
+    let sayı7=document.getElementById('number-7')
+    let sayıcık7='186,988,000'
+    sayı7.innerHTML=sayıcık7
+
+    let sayı8=document.getElementById('number-8')
+    let sayıcık8='161,006,790'
+    sayı8.innerHTML=sayıcık8
+
+    let sayı9=document.getElementById('number-9')
+    let sayıcık9='146,599,183'
+    sayı9.innerHTML=sayıcık9
+
+    let sayı10=document.getElementById('number-10')
+    let sayıcık10='126,960,000'
+    sayı10.innerHTML=sayıcık10
+      }
+        function languages(){
+            let result=document.getElementById('show-p')
+            let resultL='10 Most Spoken Languages In The World'
+            result.innerHTML=resultL
+
+            let lang=document.getElementById('countries')
+            let languages='English'
+            lang.innerHTML=languages
+            let lang1=document.getElementById('countries-1')
+            let languages1='French'
+            lang1.innerHTML=languages1
+            let lang2=document.getElementById('countries-2')
+            let languages2='Arabic'
+            lang2.innerHTML=languages2
+            let lang3=document.getElementById('countries-3')
+            let languages3='Spanish'
+            lang3.innerHTML=languages3
+            let lang4=document.getElementById('countries-4')
+            let languages4='Portuguese'
+            lang4.innerHTML=languages4
+            let lang5=document.getElementById('countries-5')
+            let languages5='Russian'
+            lang5.innerHTML=languages5
+            let lang6=document.getElementById('countries-6')
+            let languages6='Dutch'
+            lang6.innerHTML=languages6
+            let lang7=document.getElementById('countries-7')
+            let languages7='German'
+            lang7.innerHTML=languages7
+            let lang8=document.getElementById('countries-8')
+            let languages8='Chinese'
+            lang8.innerHTML=languages8
+            let lang9=document.getElementById('countries-9')
+            let languages9='Serbian'
+            lang9.innerHTML=languages9
+            let lang10=document.getElementById('countries-10')
+            lang10.innerHTML=''
+            //
+            let lgrafik=document.getElementById('graphics')
+    lgrafik.style.width='800px'
+    lgrafik.style.height='25px'
+    lgrafik.style.display='block'
+    lgrafik.style.justifyContent='center'
+    lgrafik.style.backgroundColor='orange'
+
+    let lgrafik1=document.getElementById('graphics-1')
+    lgrafik1.style.width='400px'
+    lgrafik1.style.height='25px'
+    lgrafik1.style.display='block'
+    lgrafik1.style.justifyContent='center'
+    lgrafik1.style.backgroundColor='orange'
+    
+    let lgrafik2=document.getElementById('graphics-2')
+    lgrafik2.style.width='280px'
+    lgrafik2.style.height='25px'
+    lgrafik2.style.display='block'
+    lgrafik2.style.justifyContent='center'
+    lgrafik2.style.backgroundColor='orange'
+
+    let lgrafik3=document.getElementById('graphics-3')
+    lgrafik3.style.width='260px'
+    lgrafik3.style.height='25px'
+    lgrafik3.style.display='block'
+    lgrafik3.style.justifyContent='center'
+    lgrafik3.style.backgroundColor='orange'
+
+    let lgrafik4=document.getElementById('graphics-4')
+    lgrafik4.style.width='130px'
+    lgrafik4.style.height='25px'
+    lgrafik4.style.display='block'
+    lgrafik4.style.justifyContent='center'
+    lgrafik4.style.backgroundColor='orange'
+
+    let lgrafik5=document.getElementById('graphics-5')
+    lgrafik5.style.width='130px'
+    lgrafik5.style.height='25px'
+    lgrafik5.style.display='block'
+    lgrafik5.style.justifyContent='center'
+    lgrafik5.style.backgroundColor='orange'
+
+    let lgrafik6=document.getElementById('graphics-6')
+    lgrafik6.style.width='115px'
+    lgrafik6.style.height='25px'
+    lgrafik6.style.display='block'
+    lgrafik6.style.justifyContent='center'
+    lgrafik6.style.backgroundColor='orange'
+
+    let lgrafik7=document.getElementById('graphics-7')
+    lgrafik7.style.width='100px'
+    lgrafik7.style.height='25px'
+    lgrafik7.style.display='block'
+    lgrafik7.style.justifyContent='center'
+    lgrafik7.style.backgroundColor='orange'
+
+    let lgrafik8=document.getElementById('graphics-8')
+    lgrafik8.style.width='70px'
+    lgrafik8.style.height='25px'
+    lgrafik8.style.display='block'
+    lgrafik8.style.justifyContent='center'
+    lgrafik8.style.backgroundColor='orange'
+
+    let lgrafik9=document.getElementById('graphics-9')
+    lgrafik9.style.width='50px'
+    lgrafik9.style.height='25px'
+    lgrafik9.style.display='block'
+    lgrafik9.style.justifyContent='center'
+    lgrafik9.style.backgroundColor='orange'
+
+    let lgrafik10=document.getElementById('graphics-10')
+    lgrafik10.style.width='0px'
+    lgrafik10.style.height='0px'
+
+
+    let grafik10=document.getElementById('graphics-10')
+    grafik10.innerHTML=''
+
+    let sayı=document.getElementById('number')
+    let sayıcık='91'
+    sayı.innerHTML=sayıcık
+
+    let sayı1=document.getElementById('number-1')
+    let sayıcık1='45'
+    sayı1.innerHTML=sayıcık1
+
+    let sayı2=document.getElementById('number-2')
+    let sayıcık2='25'
+    sayı2.innerHTML=sayıcık2
+
+    let sayı3=document.getElementById('number-3')
+    let sayıcık3='24'
+    sayı3.innerHTML=sayıcık3
+
+    let sayı4=document.getElementById('number-4')
+    let sayıcık4='9'
+    sayı4.innerHTML=sayıcık4
+
+    let sayı5=document.getElementById('number-5')
+    let sayıcık5='9'
+    sayı5.innerHTML=sayıcık5
+
+    let sayı6=document.getElementById('number-6')
+    let sayıcık6='8'
+    sayı6.innerHTML=sayıcık6
+
+    let sayı7=document.getElementById('number-7')
+    let sayıcık7='7'
+    sayı7.innerHTML=sayıcık7
+
+    let sayı8=document.getElementById('number-8')
+    let sayıcık8='5'
+    sayı8.innerHTML=sayıcık8
+
+    let sayı9=document.getElementById('number-9')
+    let sayıcık9='4'
+    sayı9.innerHTML=sayıcık9
+
+    let sayı10=document.getElementById('number-10')
+    sayı10.innerHTML=''
+        }
+
+    </script>
+</body>
+</html>

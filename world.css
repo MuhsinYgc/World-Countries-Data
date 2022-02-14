@@ -1,0 +1,21 @@
+body{
+    background-color: aliceblue;
+}
+
+.titles{
+    text-align: center;
+    padding-top: 1rem;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    border-radius: 50px;
+}
+.important{
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
